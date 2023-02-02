@@ -2,7 +2,7 @@ public class Conexao implements AutoCloseable{
 
     public Conexao() {
         System.out.println("Abrindo conexao");
-        //throw IllegalStateException();
+        throw new IllegalStateException();
     }
 
     public void leDados() {
@@ -10,7 +10,8 @@ public class Conexao implements AutoCloseable{
         throw new IllegalStateException();
     }
 
-    public void close()throws Exception {
+    @Override
+    public void close() {
         System.out.println("Fechando conexao");
     }
 }

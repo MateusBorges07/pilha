@@ -17,7 +17,7 @@ public class TesteConexao {
         } finally {
             System.out.println("finally");
             if (con != null){
-                con.close();
+                    con.close();
             }
 
         }
